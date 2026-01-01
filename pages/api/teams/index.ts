@@ -43,10 +43,8 @@ const handlePOST = async (req: NextApiRequest, res: NextApiResponse) => {
 
 // Get all teams for the current user
 const handleGET = async (req: NextApiRequest, res: NextApiResponse) => {
-  const currentUser = await getCurrentUser(req);
-  const teams = await getTeams(currentUser);
 
   res.status(200).json({
-    data: teams,
+    data: ["aws","is here"],
   });
 };
